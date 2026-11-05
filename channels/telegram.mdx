@@ -1,0 +1,61 @@
+---
+title: "Connect Telegram"
+sidebarTitle: "Telegram"
+icon: "telegram"
+iconType: "brands"
+description: "Create a bot and connect your Telegram groups and channels to publish to them."
+---
+
+Telegram connects through a bot that you create and own. The bot must be an administrator of each group or channel you want to publish to.
+
+<Steps>
+  <Step title="Create your bot">
+    In Telegram, search for **@BotFather** and send `/newbot`. Follow the prompts, then copy the **bot token** it gives you.
+
+    <Warning>
+      Your bot token is a secret, so never share it publicly.
+    </Warning>
+  </Step>
+  <Step title="Make the bot an administrator">
+    Open your group or channel settings and go to **Administrators**, then **Add Administrator**. Search for your bot by username. Give it permission to read and post messages, then confirm.
+  </Step>
+  <Step title="Send a message">
+    Send any message, such as "hello", in the group or channel so the bot can detect it.
+  </Step>
+  <Step title="Open the connect window">
+    In OSCOHub, select **+** next to **Messaging** in the sidebar, then choose **Telegram**.
+  </Step>
+  <Step title="Enter your token">
+    Paste the bot token and select **Detect Groups & Channels**. Select the chats you want and select **Connect Telegram**.
+  </Step>
+</Steps>
+
+Each group or channel you connect counts as one messaging channel on your plan.
+
+## If your chat isn't detected
+
+You can enter the chat ID yourself. Forward any message from your group to **@userinfobot** on Telegram to find it, enter it under **Or enter Chat ID manually**, then select **Verify Chat**.
+
+## What you can publish
+
+Text, a photo, a video, an album or a PDF document. You can also format your text and pin a message. See [formats and limits](/posts/formats-and-limits#telegram).
+
+## Common problems
+
+<AccordionGroup>
+  <Accordion title="The bot token is invalid">
+    Check the token in BotFather and paste it again.
+  </Accordion>
+  <Accordion title="Bot found, but not an administrator">
+    Open the group's settings, go to **Administrators** and promote the bot. Then try again.
+  </Accordion>
+  <Accordion title="The bot is missing the Post Messages permission">
+    Open the channel settings, go to **Administrators**, edit the bot's permissions and turn on **Post Messages**. Then select **Fix & Try Again**.
+  </Accordion>
+  <Accordion title="A webhook is already registered for this bot">
+    The bot is already connected. Disconnect the existing connection in OSCOHub first, then try again.
+  </Accordion>
+  <Accordion title="The bot can no longer reach this chat">
+    Check that the bot is still a member and that the chat still exists.
+  </Accordion>
+</AccordionGroup>

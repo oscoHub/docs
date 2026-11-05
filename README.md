@@ -1,55 +1,45 @@
-# Mintlify Starter Kit
+# OSCOHub Help Center
 
-Use the starter kit to get your docs deployed and ready to customize.
+The customer knowledge base for [OSCOHub](https://app.oscohub.com), built on [Mintlify](https://mintlify.com).
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## Run it locally
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
-
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
-
-## AI-assisted writing
-
-Set up your AI coding tool to work with Mintlify:
+You need Node.js 20.17 or newer. From this folder, run:
 
 ```bash
-npx skills add https://mintlify.com/docs
+npx mint@latest dev
 ```
 
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
+The preview opens at `http://localhost:3000`.
 
-See the guides for [Claude Code](https://www.mintlify.com/docs/guides/claude-code), [Codex](https://www.mintlify.com/docs/guides/codex), [Cursor](https://www.mintlify.com/docs/guides/cursor), and [Devin Desktop](https://www.mintlify.com/docs/guides/devin-desktop) for tool-specific setup.
+## Check your changes
 
-## Development
-
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
-npm i -g mint
+```bash
+npx mint@latest validate
+npx mint@latest broken-links --check-anchors
 ```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+## Layout
 
-```
-mint dev
-```
+| Path | What's in it |
+|---|---|
+| `docs.json` | Site settings, branding and navigation |
+| `get-started/` | Quickstart, sign-up and a tour of the app |
+| `channels/` | Connecting and managing each platform |
+| `posts/` | Writing, scheduling and managing posts |
+| `library/` | Designs, post templates and post ideas |
+| `insights/` | Statistics |
+| `stores/` | WooCommerce |
+| `plans/` | Plans, billing and limits |
+| `account/` | Sign-in, security, data and deletion |
+| `help/` | Troubleshooting, support and feedback |
+| `images/` | Screenshots, as light and dark pairs |
+| `logo/` | The OSCOHub logos, copied from the app |
 
-View your local preview at `http://localhost:3000`.
+## Writing
 
-## Publishing changes
+[`AGENTS.md`](AGENTS.md) has the terminology, the style rules, and the list of things in the app that look real but aren't built yet. Read it before writing a page.
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+## Publishing
 
-## Need help?
-
-### Troubleshooting
-
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
-
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+Once Mintlify's GitHub app is connected to this repository, pushes to the default branch deploy automatically.

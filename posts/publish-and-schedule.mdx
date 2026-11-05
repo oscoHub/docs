@@ -1,0 +1,54 @@
+---
+title: "Publish and schedule"
+description: "Send a post now, choose a time for it, or save it as a draft, and see what happens when it comes due."
+---
+
+The button at the bottom of the post window does the publishing. Open the arrow beside it to switch between the three modes.
+
+| Mode | What happens |
+|---|---|
+| **Schedule post** | Publishes at the date and time you pick. |
+| **Publish now** | Publishes immediately. |
+| **Save draft** | Keeps the post to finish later. It won't publish until you schedule it. |
+
+## Pick a date and time
+
+Select the date field, choose a day and time, then select **Apply schedule**. The time must be in the future.
+
+### Time zones
+
+Each post follows a time zone, shown next to the date. It starts as the channel's own [time zone](/channels/manage#change-the-time-zone). Check it if you're scheduling for an audience in another country.
+
+## When a post comes due
+
+Just before publishing, OSCOHub checks that the post can go out.
+
+| What it finds | What happens |
+|---|---|
+| Everything is fine | The post publishes and moves to **Published**. |
+| You sent one post to several channels | They go out over about two minutes rather than all in the same second, so platforms don't mistake them for spam. |
+| The channel is paused or disconnected | The post fails and moves to **Issues**. |
+| The channel's login stopped working | The post fails and moves to **Issues**. [Reconnect the channel](/channels/manage#reconnect-a-channel), then retry the post. |
+| The platform's daily limit is reached | The post waits, and goes out once the platform allows it. See below. |
+| Your plan has ended | The post is paused. See [when your plan ends](/plans/change-your-plan#when-your-plan-ends). |
+| It's about a store product | OSCOHub [checks the product first](/stores/post-about-a-product#what-happens-before-the-post-goes-out). |
+
+## Platform daily limits
+
+Some platforms limit how many posts one account can publish through apps.
+
+| Platform | Limit per account | Period |
+|---|---|---|
+| Instagram | 100 posts (a carousel counts as one) | Rolling 24 hours |
+| Threads | 250 posts (a carousel counts as one) | Rolling 24 hours |
+| LinkedIn | 150 posts | One day, in UTC |
+
+A scheduled post that would go over stays pending, you get a notification once, and it publishes when room frees up. **Publish now** is refused instead, and tells you when it can go out.
+
+OSCOHub counts only the posts it publishes for you. If you also post to the platform by other means, the platform may refuse a post before OSCOHub's count reaches the limit.
+
+These limits come from the platforms. They're separate from your [OSCOHub plan's limits](/plans/limits).
+
+## How you find out
+
+Check the bell in the top bar. You get a notification when a post publishes or fails, along with the reason it failed.

@@ -1,0 +1,59 @@
+---
+title: "Connect your WooCommerce store"
+sidebarTitle: "Connect WooCommerce"
+description: "Link your WooCommerce store to OSCOHub in one click, or with API keys."
+---
+
+OSCOHub connects to WooCommerce stores on WordPress. Other store platforms marked **Coming Soon** in the connect window can't be connected yet. Your plan sets [how many stores you can connect](/plans/compare-plans).
+
+<Steps>
+  <Step title="Open the connect window">
+    In the sidebar, select **+** next to **Stores**, then choose **WooCommerce**.
+  </Step>
+  <Step title="Enter your store address">
+    Enter the address customers use to visit your shop, such as `my-store.ma`, then select **Continue**. OSCOHub checks that it can find your store.
+  </Step>
+  <Step title="Connect">
+    Choose one of the two ways below.
+  </Step>
+</Steps>
+
+<Tabs>
+  <Tab title="In one click">
+    Select **Approve on my store**. We send you to your own store to approve the connection, so there's nothing to copy.
+  </Tab>
+  <Tab title="With API keys">
+    Select **Or connect with API keys instead**, then:
+
+    1. In WordPress, open **WooCommerce**, **Settings**, **Advanced**, **REST API**.
+    2. Select **Add key**, give it any description, and choose your admin user.
+    3. Set **Permissions** to **Read/Write**, then select **Generate API key**.
+    4. Copy the consumer key and consumer secret into OSCOHub, then select **Connect store**. WooCommerce shows them only once.
+  </Tab>
+</Tabs>
+
+Your store now appears under **Stores** in the sidebar. Next, [import your products](/stores/products).
+
+## Manage the connection
+
+Open your store from the sidebar.
+
+| Action | What it does |
+|---|---|
+| **Check Connection** | Tests that OSCOHub can reach your store and that its keys work. OSCOHub also checks every day. |
+| **Pause Store** | Stops OSCOHub publishing to your store. You can still browse and sync products. Posts about its products [won't go out](/stores/post-about-a-product#what-happens-before-the-post-goes-out) while it's paused. |
+| **Disconnect** (on the **Settings** tab) | Stops syncing and deletes the store's API keys. Your products stay in OSCOHub, and you can connect again at any time. Posts about its products can no longer be published. |
+
+## Common problems
+
+<AccordionGroup>
+  <Accordion title="We did not receive the keys from your store">
+    The one-click approval didn't finish. Try again, or use the API keys option.
+  </Accordion>
+  <Accordion title="That store is already connected">
+    You'll find it in the sidebar under **Stores**.
+  </Accordion>
+  <Accordion title="OSCOHub could not reach your store">
+    Check that the site is online, then select **Check Connection** again.
+  </Accordion>
+</AccordionGroup>

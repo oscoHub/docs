@@ -1,72 +1,146 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "OSCOHub Help Center",
+  "description": "Guides for connecting your accounts, publishing and scheduling posts, reading your Insights, and selling from your WooCommerce store with OSCOHub.",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#465FFF",
+    "light": "#7592FF",
+    "dark": "#3641F5"
   },
   "favicon": "/favicon.svg",
-  "navigation": {
-    "pages": [
-      {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
   },
+  "fonts": {
+    "family": "Geist"
+  },
+  "appearance": {
+    "default": "system"
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Get started",
+        "pages": [
+          "index",
+          "get-started/quickstart",
+          "get-started/create-account",
+          "get-started/find-your-way-around"
+        ]
+      },
+      {
+        "group": "Channels",
+        "pages": [
+          "channels/overview",
+          {
+            "group": "Connect a platform",
+            "expanded": true,
+            "pages": [
+              "channels/facebook",
+              "channels/instagram",
+              "channels/linkedin",
+              "channels/threads",
+              "channels/youtube",
+              "channels/bluesky",
+              "channels/telegram"
+            ]
+          },
+          "channels/manage"
+        ]
+      },
+      {
+        "group": "Posts",
+        "pages": [
+          "posts/create-a-post",
+          "posts/publish-and-schedule",
+          "posts/repeat-a-post",
+          "posts/manage-your-posts",
+          "posts/formats-and-limits"
+        ]
+      },
+      {
+        "group": "Library",
+        "pages": [
+          "library/designs",
+          "library/post-templates",
+          "library/post-ideas"
+        ]
+      },
+      {
+        "group": "Insights",
+        "pages": [
+          "insights/overview",
+          "insights/statistics-by-platform"
+        ]
+      },
+      {
+        "group": "Stores",
+        "pages": [
+          "stores/connect-woocommerce",
+          "stores/products",
+          "stores/post-about-a-product",
+          "stores/product-post-templates"
+        ]
+      },
+      {
+        "group": "Plans and billing",
+        "pages": [
+          "plans/compare-plans",
+          "plans/change-your-plan",
+          "plans/limits"
+        ]
+      },
+      {
+        "group": "Your account",
+        "pages": [
+          "account/sign-in-and-password",
+          "account/two-step-login",
+          "account/preferences",
+          "account/your-data",
+          "account/delete-your-account"
+        ]
+      },
+      {
+        "group": "Help",
+        "pages": [
+          "help/troubleshooting",
+          "help/contact-support",
+          "help/feedback-and-roadmap"
+        ]
+      }
+    ]
+  },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:support@mintlify.com"
+        "label": "Contact support",
+        "href": "https://app.oscohub.com/contact"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "Open OSCOHub",
+      "href": "https://app.oscohub.com"
     }
+  },
+  "search": {
+    "prompt": "Search the Help Center"
   },
   "contextual": {
     "options": [
       "copy",
       "view",
       "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
+      "claude"
     ]
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+  "errors": {
+    "404": {
+      "redirect": false,
+      "title": "We couldn't find that page",
+      "description": "It may have moved. Try the search above, or go back to the [Help Center home](/)."
     }
   }
 }

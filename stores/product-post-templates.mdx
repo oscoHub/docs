@@ -1,0 +1,70 @@
+---
+title: "Product post templates"
+description: "Decide what a post about one of your products says, using the product's own details."
+---
+
+A product post template writes the caption for you. You write the wording you like and drop in details such as the product's name, price and link. OSCOHub fills them in for each product.
+
+Each store has its own templates on its **Templates** tab, up to 30 per store. Until you make your own, posts use the built-in **Standard product post**.
+
+## Create a template
+
+<Steps>
+  <Step title="Start a template">
+    Open your store's **Templates** tab and select **New template**. To begin from the built-in wording, select **Start from this** on it.
+  </Step>
+  <Step title="Write the post">
+    Give the template a name, then write the post. Click a detail below the text box to drop it in where your cursor is, or drag it into the text.
+  </Step>
+  <Step title="Choose where it's used">
+    Pick the platforms this template is written for. Choose none and it suits every platform that has no template of its own.
+  </Step>
+  <Step title="Check the preview">
+    The preview shows the result for a typical product or for one of yours. You can also try it for a product that's missing some details.
+  </Step>
+  <Step title="Make it the default">
+    Turn on **Use this template by default**, or select **Use this one** on the template later.
+  </Step>
+</Steps>
+
+## Available details
+
+| Group | Detail | In the template |
+|---|---|---|
+| **Product** | Name | `{{name}}` |
+| | Description | `{{description}}` |
+| | SKU | `{{sku}}` |
+| | Category | `{{category}}` |
+| | Categories | `{{categories}}` |
+| | Hashtags | `{{hashtags}}` |
+| | In stock | `{{stock_quantity}}` |
+| | Product link | `{{link}}` |
+| **Price** | Price | `{{price}}` |
+| | Was (on sale) | `{{price_was}}` |
+| | Regular price | `{{regular_price}}` |
+| | Sale price | `{{sale_price}}` |
+| | Discount % | `{{discount_percent}}` |
+| | You save | `{{discount_amount}}` |
+| | Sale ends | `{{sale_ends_at}}` |
+| | Currency | `{{currency}}` |
+| **Your store** | Store name | `{{store_name}}` |
+| | Store link | `{{store_url}}` |
+| | Phone | `{{phone}}` |
+| | WhatsApp | `{{whatsapp}}` |
+| | Call to action | `{{cta}}` |
+
+## When a detail is missing
+
+A line is kept only when at least one of its details has a value. For example, `Price: {{price}}` disappears for a product with no price, so give each detail its own line.
+
+To show something else instead, add it after a bar: `{{price|ask us}}`.
+
+## Add your contact details
+
+**Phone**, **WhatsApp** and **Call to action** come from your store's **Settings** tab, under **Contact details**. Keeping them there means a changed number updates in every template at once. A detail you haven't saved yet appears greyed out in the template editor.
+
+## Good to know
+
+- OSCOHub warns you if a link won't be clickable on a platform. People can see it, but they can't tap it.
+- A caption longer than the platform allows is cut when it goes out. The preview warns you if this will happen.
+- Editing or deleting a template doesn't change posts you've already written with it.
