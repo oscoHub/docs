@@ -10,3 +10,6 @@ LICENSE
 # Draft content
 drafts/
 *.draft.mdx
+
+# Screenshot tooling: scripts, demo data and planning captures.
+scripts/

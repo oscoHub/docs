@@ -6,6 +6,8 @@ iconType: "brands"
 description: "Create a bot and connect your Telegram groups and channels to publish to them."
 ---
 
+import { Screenshot } from '/snippets/screenshot.jsx';
+
 Telegram connects through a bot that you create and own. The bot must be an administrator of each group or channel you want to publish to.
 
 <Steps>
@@ -24,9 +26,17 @@ Telegram connects through a bot that you create and own. The bot must be an admi
   </Step>
   <Step title="Open the connect window">
     In OSCOHub, select **+** next to **Messaging** in the sidebar, then choose **Telegram**.
+
+    The window walks you through the same three stages: **Create Bot**, **Add to Group** and **Enter Details**. Select **Next** to move on once you've done each one.
+
+    <Screenshot name="connect-telegram-form" alt="The Connect Telegram window on its first stage, Create Bot, with the steps for BotFather" />
+
+    <Screenshot name="connect-messaging-window" alt="The Connect messaging window with the Telegram card marked" />
   </Step>
   <Step title="Enter your token">
     Paste the bot token and select **Detect Groups & Channels**. Select the chats you want and select **Connect Telegram**.
+
+    <Screenshot name="connect-telegram-details" alt="The Enter Details stage of the Connect Telegram window, with a field for the bot token" />
   </Step>
 </Steps>
 
