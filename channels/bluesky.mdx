@@ -6,6 +6,8 @@ iconType: "brands"
 description: "Connect your Bluesky profile using an app password."
 ---
 
+import { Screenshot } from '/snippets/screenshot.jsx';
+
 Bluesky connects with an **app password**, a separate password you create just for OSCOHub. Don't enter your main Bluesky password.
 
 <Steps>
@@ -14,9 +16,13 @@ Bluesky connects with an **app password**, a separate password you create just f
   </Step>
   <Step title="Start the connection">
     In OSCOHub, select **+** next to **Social media** in the sidebar, then choose **Bluesky**.
+
+    <Screenshot name="connect-card-bluesky" alt="The Connect a channel window with the Bluesky card marked" />
   </Step>
   <Step title="Enter your details">
     Enter your handle, such as `handle.bsky.social`, and paste the app password. Select **Connect**.
+
+    <Screenshot name="connect-bluesky-form" alt="The Connect Bluesky window with a handle and an app password filled in, and the link to create an app password marked" caption="The marked link opens the page in Bluesky where you create an app password." />
   </Step>
 </Steps>
 

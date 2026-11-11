@@ -3,12 +3,11 @@ title: "Manage your posts"
 description: "Find, edit, duplicate, retry and delete your posts from the Scheduling page."
 ---
 
+import { Screenshot } from '/snippets/screenshot.jsx';
+
 **Scheduling** shows every post across all your channels. A channel's own page has the same tabs, showing only that channel's posts.
 
-<Frame caption="The Scheduling page in calendar view">
-  <img className="block dark:hidden" src="/images/scheduling-light.png" alt="The Scheduling page, showing tabs for Schedule, Pending, Drafts, Published, Recurring and Issues above a monthly calendar" />
-  <img className="hidden dark:block" src="/images/scheduling-dark.png" alt="The Scheduling page, showing tabs for Schedule, Pending, Drafts, Published, Recurring and Issues above a monthly calendar" />
-</Frame>
+<Screenshot name="scheduling" alt="The Scheduling page, showing tabs for Schedule, Pending, Drafts, Published, Recurring and Issues above a monthly calendar" caption="The Scheduling page in calendar view" />
 
 ## The tabs
 
@@ -21,13 +20,19 @@ description: "Find, edit, duplicate, retry and delete your posts from the Schedu
 | **Recurring** | Your [repeating posts](/posts/repeat-a-post). |
 | **Issues** | Posts that failed or were cancelled. |
 
+A coloured dot on each post's icon in the calendar shows its state at a glance. Select **List** at the top right of the calendar to see the same posts as cards.
+
+<Screenshot name="manage-list" alt="The Schedule tab in list view, showing post cards with their channel, type, status, text, image, date and time" />
+
 ## Find a post
 
 Use **Search** to look through a post's content or title, or to filter by category, campaign, date range and tags. Use **Tags** to filter by tag.
 
 ## What you can do with a post
 
-Open the menu on a post card. The options depend on the post's state.
+Open the menu (**...**) on a post card. The options depend on the post's state.
+
+<Screenshot name="manage-post-menu" alt="A pending post card with its menu open, showing Edit Post, Duplicate, Publish Now, Move to Draft and Delete" />
 
 | State | Options |
 |---|---|
@@ -41,7 +46,11 @@ Open the menu on a post card. The options depend on the post's state.
 
 ## Retry a failed post
 
-Failed posts appear under **Issues** with the reason. Fix the cause first if there is one, such as [reconnecting the channel](/channels/manage#reconnect-a-channel), then select **Retry**. If it fails again, it returns to **Issues** with the new error.
+Failed posts appear under **Issues** with the reason. Fix the cause first if there is one, such as [reconnecting the channel](/channels/manage#reconnect-a-channel), then select **Retry**.
+
+<Screenshot name="manage-issues" alt="The Issues tab with a failed Instagram post, its error message and the Retry button marked" />
+
+If it fails again, it returns to **Issues** with the new error.
 
 See [troubleshooting](/help/troubleshooting#a-post-failed-to-publish) for what each reason means.
 

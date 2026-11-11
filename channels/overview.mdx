@@ -3,6 +3,8 @@ title: "Connect a channel"
 description: "A channel is a social account, Page or Telegram chat that OSCOHub can publish to."
 ---
 
+import { Screenshot } from '/snippets/screenshot.jsx';
+
 Each channel you connect appears in the sidebar and can receive posts. Your plan sets [how many you can connect](/plans/compare-plans).
 
 ## Supported platforms
@@ -19,19 +21,20 @@ Each channel you connect appears in the sidebar and can receive posts. Your plan
 
 Platforms marked **Coming Soon** in the connect window can't be connected yet.
 
-<Frame caption="Pick a platform in the connect window">
-  <img className="block dark:hidden" src="/images/connect-channel-light.png" alt="The Connect a channel window, showing a card for each platform" />
-  <img className="hidden dark:block" src="/images/connect-channel-dark.png" alt="The Connect a channel window, showing a card for each platform" />
-</Frame>
-
 ## Open the connect window
 
 Use any of these:
 
-- In the sidebar, select **+** next to **Social media** or **Messaging**.
+- In the sidebar, select **+** next to **Social media** (1) for a social channel, or next to **Messaging** (2) for Telegram. The **+** next to **Stores** (3) is for [connecting a store](/stores/connect-woocommerce).
 - Select **Create**, then **Link Platform**.
 
-The top of the window shows how many of your plan's slots you've used. To read about a platform before connecting it, select the **i** on its card.
+<Screenshot name="connect-open" alt="The OSCOHub sidebar with the plus buttons next to Social media, Messaging and Stores marked 1, 2 and 3" caption="The three + buttons in the sidebar" />
+
+The connect window shows a card for each platform. Pick one and follow its steps.
+
+<Screenshot name="connect-window" alt="The Connect a channel window, showing a card for each platform and how many channels are connected" caption="The Connect a channel window" />
+
+The top right of the window shows how many of your plan's slots you've used. To read about a platform before connecting it, select the **i** on its card.
 
 <Note>
   Social channels and messaging channels have separate limits on each plan. If every slot is in use, disconnect a channel or [upgrade your plan](/plans/change-your-plan).

@@ -24,6 +24,8 @@ The product code is the source of truth, in the `oscoHub/saas` repository. Never
 | TikTok, X, Pinterest, WhatsApp, Discord, YouCan, Shopify, CSV, PrestaShop, Wix, BigCommerce, Magento | `coming_soon`. Check `GET /api/v1/social-platforms/active` for what's live. |
 | LinkedIn company pages | The app card mentions them, but the code only requests `w_member_social`. |
 | Personal Instagram accounts | The app card mentions them, but both connection methods need a professional account. |
+| The Dashboard's **Distribution Overview** and **Posts by Category** | Hard-coded or generated numbers in `PostStatusDistribution.vue` and `PostsActivityTimeline.vue`, the same for every account. Only the three usage cards at the top are real. |
+| **Posting Schedule** in a channel's menu | Not checked yet. Confirm in the code before documenting it. |
 
 **Do not document at all:**
 
@@ -73,16 +75,23 @@ Spell UI labels exactly as they appear in `frontEnd/src/locales/en.json`, and pu
 
 ## Screenshots
 
-Images live in `/images/` as a `-light.png` and `-dark.png` pair, and show demo data only. Use both together:
+Images live in `/images/` as a `-light.png` and `-dark.png` pair. Show them with the `Screenshot` snippet, which picks the one for the reader's theme:
 
 ```mdx
-<Frame caption="What it shows">
-  <img className="block dark:hidden" src="/images/name-light.png" alt="Description" />
-  <img className="hidden dark:block" src="/images/name-dark.png" alt="Description" />
-</Frame>
+import { Screenshot } from '/snippets/screenshot.jsx';
+
+<Screenshot name="connect-window" alt="What the image shows, for screen readers" caption="Optional caption" />
 ```
 
-Only add a screenshot where it helps someone find their way, because each one has to be retaken when the design changes. Never capture placeholder screens, real customer data, or the dev build's DevTools button.
+**Never take screenshots by hand.** Every image comes from `scripts/screenshots/`, which drives the live (`main`) build of the app, signed in as a fictional demo brand (Atlas Coffee Roasters), and captures both themes. To add one, add a shot to `shots.mjs` or `shots-more.mjs` and run it. To retake them all after a redesign, run `node shoot.mjs`. The [README](scripts/screenshots/README.md) has the setup.
+
+A screenshot earns its place when it shows where to click. Mark the control a step names with the script's numbered outline (`h.mark(locator, n)`), and say the number in the text when there's more than one. Put the image after the sentence that describes it.
+
+Never capture:
+
+- Real accounts, real customer data, or anything from the owner's own database.
+- Anything in the "Do not document" table above. That includes the Dashboard's lower charts, the Contact page's phone numbers and hours, sessions on Settings, and the plans page's yearly toggle.
+- The dev build, which shows the Vue DevTools button. The script uses a production build.
 
 ## Before you finish
 

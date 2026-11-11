@@ -1,0 +1,67 @@
+/*
+ * OSCOHub Help Center: brings Mintlify's Almond theme close to the app.
+ * Values come from the app's design system (doc/DESIGN.md in oscoHub/saas):
+ * neutral canvas and panel, translucent lines, blue only for links and the
+ * main action, and a neutral grey for the selected sidebar row.
+ * Mintlify loads every .css file in this folder on every page.
+ */
+
+:root {
+  --osco-line: rgba(16, 16, 16, 0.1);
+  --osco-line-strong: rgba(16, 16, 16, 0.2);
+  --osco-selected: rgba(115, 115, 115, 0.15);
+  --osco-hover: rgba(115, 115, 115, 0.1);
+  --osco-panel: #fafafa;
+  --osco-surface: #ffffff;
+  --osco-fg: #1a1a1a;
+}
+
+html.dark {
+  --osco-line: rgba(255, 255, 255, 0.1);
+  --osco-line-strong: rgba(255, 255, 255, 0.2);
+  --osco-selected: rgba(255, 255, 255, 0.15);
+  --osco-hover: rgba(255, 255, 255, 0.1);
+  --osco-panel: #161616;
+  --osco-surface: #1a1a1a;
+  --osco-fg: #f5f5f5;
+}
+
+/* The canvas behind the panel, as in the app's dark theme. */
+html.dark body {
+  background-color: #1a1a1a;
+}
+
+/* The logo at the size the app's sidebar shows it. */
+.nav-logo {
+  height: 1.75rem !important;
+}
+
+/* The content panel: the app's panel colour and a translucent edge. */
+#content-container {
+  background-color: var(--osco-panel) !important;
+  box-shadow: 0 0 0 1px var(--osco-line);
+}
+
+/* Sidebar rows: neutral hover and a neutral selected row, like the app. */
+li[data-title] > a:hover {
+  background-color: var(--osco-hover);
+}
+li[data-active-nav-item='true'] > a {
+  background-color: var(--osco-selected) !important;
+  color: var(--osco-fg) !important;
+  font-weight: 500;
+}
+
+/* Cards, frames and callouts: white surface, translucent line, 16px radius. */
+#content-area a[data-client-link] > div,
+#content-area .card,
+#content-area [data-component-part='frame'],
+#content-area .frame {
+  border-color: var(--osco-line) !important;
+  border-radius: 1rem;
+}
+
+/* Screenshots sit on the panel like a card in the app. */
+#content-area img[src^='/images/'] {
+  border-radius: 0.75rem;
+}
